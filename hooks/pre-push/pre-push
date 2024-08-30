@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Get the name of the branch being pushed
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Branches to protect
+# You can add your branches to protect
+protected_branches=("development" "main")
+
+# Check if the current branch is in the protected list
+for branch in "${protected_branches[@]}"; do
+  if [ "$current_branch" == "$branch" ]; then
+    echo "Pushing to $branch branch is not allowed."
+    exit 1
+  fi
+done
+
+# If no matches, proceed with the push
+exit 0
