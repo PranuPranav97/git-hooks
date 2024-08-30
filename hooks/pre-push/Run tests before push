@@ -1,0 +1,12 @@
+# Run tests before pushing
+echo "Running tests..."
+yarn test # or `npm test` depending on your package manager
+
+# Check if tests passed
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Aborting push."
+  exit 1
+fi
+
+# If tests pass, proceed with the push
+exit 0
