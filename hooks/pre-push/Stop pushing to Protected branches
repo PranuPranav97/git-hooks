@@ -1,4 +1,5 @@
 #!/bin/bash
+# File Name pre-push
 
 # Get the name of the branch being pushed
 current_branch=$(git rev-parse --abbrev-ref HEAD)
