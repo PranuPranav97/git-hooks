@@ -9,4 +9,4 @@
 4. Make the file executable by running `chmod +x hooks_file_name`.
 
 ## Tips
-If you want multiple hooks for same type then put the contents in same hooks 
+If you want multiple hooks for same type then put the contents in same hooks and remove the exit 0 from previous hook and make sure you have exit 0 in last hook.
